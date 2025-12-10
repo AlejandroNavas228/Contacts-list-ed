@@ -1,0 +1,166 @@
+#main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+#main-form {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  border: 1px solid gray;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-form-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-form-input-container > label {
+  font-weight: 500;
+}
+
+.form-input {
+  outline: 1px solid gray;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.main-form-helper-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: red;
+  display: none;
+}
+
+#main-form-btn {
+  background-color: #4338ca;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.375rem;
+}
+
+#contacts-list {
+  margin: 0;
+  padding: 0.5rem;
+  list-style: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid gray;
+  height: 100%;
+}
+
+.edit-btn {
+  width: 2rem;
+  height: 2rem;
+}
+
+.delete-btn {
+  width: 2rem;
+  height: 2rem;
+}
+
+.inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.contacts-list-item-name-input, .contacts-list-item-phone-input {
+  width: 100%;
+  outline: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}
+
+.btns-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contacts-list-item {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#main-form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pencil-icon {
+  display: none;
+}
+
+.input-valid {
+  outline: 2px solid green;
+}
+
+.input-invalid {
+  outline : 2px solid red;
+}
+
+.show-helper-text{
+  display: block;
+}
+
+.input-is-editing {
+  outline: 2px solid gray;
+}
+
+.contacts-list-item-name-input.input-valid,
+.contacts-list-item-phone-input.input-valid {
+    outline: 2px solid green; 
+}
+
+.contacts-list-item-name-input.input-invalid,
+.contacts-list-item-phone-input.input-invalid {
+    outline: 2px solid red;
+
+}
+
+@media (min-width: 768px){
+  #main-form {
+    width: 70%;
+  }
+
+  #contacts-list {
+    width: 70%;
+  }
+
+  .inputs-container {
+    flex-wrap: nowrap;
+  }
+
+  #main-container {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px){
+  #main-form {
+    width: 50%;
+  }
+
+  #contacts-list {
+    width: 50%;
+  }
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de contactos</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="main-container">
+    <!-- Formulario -->
+    <form id="main-form">
+      <div class="main-form-input-container">
+        <label for="name-input">Nombre</label>
+        <input type="text" name="name-input" id="name-input" class="form-input" placeholder="Gabriel Garcia">
+          <p class="main-form-helper-text">
+            Tiene que tener nombre y apellido. <br>
+            Ambos comienzan con mayusculas.
+          </p>
+      </div>
+      <div class="main-form-input-container">
+        <label for="phone-input">Numero</label>
+        <input type="text" name="phone-input" id="phone-input" class="form-input" placeholder="04122110509">
+        <p class="main-form-helper-text">
+          Tiene que ser un numero venezolano valido.
+        </p>
+      </div>
+      <button disabled id="main-form-btn">Crear</button>
+    </form>
+    <!-- Lista -->
+    <ul id="contacts-list"></ul>
+    <template id="template-contact-item">
+      <li class="contacts-list-item" data-editing="false">
+        <div class="inputs-container">
+          <input class="contacts-list-item-name-input" type="text" value="Gabriel Garcia" readonly>
+          <p class="helper-text-name main-form-helper-text">
+            Tiene que tener nombre y apellido. Ambos comienzan con mayusculas.
+          </p>
+          <input class="contacts-list-item-phone-input" type="text" value="04122110509" readonly>
+          <p class="helper-text-phone main-form-helper-text">
+            Tiene que ser un numero venezolano valido.
+          </p>
+        </div>
+        <div class="btns-container">
+          <button class="edit-btn">
+            <ion-icon name="create-outline" data-default-icon="create-outline"></ion-icon>
+          </button>
+          <button class="delete-btn">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </div>
+      </li>
+    </template>
+  </main>
+  <script type="module" src="index.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
